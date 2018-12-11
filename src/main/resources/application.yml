@@ -1,0 +1,16 @@
+spring:
+    datasource:
+        url: jdbc:sqlite:src/main/resources/database/handbook.sqlite
+        driver-class-name: org.sqlite.JDBC
+
+#        hikari:
+#          auto-commit: false
+#        tomcat:
+#          max-active: 1
+    jpa:
+        database-platform: com.enigmabridge.hibernate.dialect.SQLiteDialect
+        hibernate:
+            format_sql: true
+            ddl-auto: update
+server:
+  port: 8888
